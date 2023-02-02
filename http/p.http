@@ -1,0 +1,67 @@
+@baseUrl=https://cicstaging.z1central.com/api/
+
+@token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiMTZmY2Y2YTY2NmI0ZmI5MzE4YjdmZTI4OGIxMTllMjQ2NzU0MGRlNjcxOTdkMDM2ZmJiZmJmNGI5NWMzOGE4MWVkMDZkYzg2ODM2YjQ0YTUiLCJpYXQiOjE2NzI3MzM0MTAuNDY4MzI3LCJuYmYiOjE2NzI3MzM0MTAuNDY4MzMxLCJleHAiOjE3MDQyNjk0MTAuNDY0OTg5LCJzdWIiOiI1MiIsInNjb3BlcyI6W119.Anb2h50ZUnYpt5F2tOgYXDYTWB3O63mz8FG4g9CIL-Qgohc_N0R6zcv8gyrlmcoKxcNszd4Uxbk_sHtXvRhNCjE3ATCUIRFXuH6BlFiRU2IKK_v6RQu-SASkYPR7lLY3nWkpuz7WhE-ooe2bB_LUeLS3GokDlK0WcrwJwoZWdmCB41s6pvuvBtbORqEWG7WudnC4vjD9yD41teK6ECYbfykqzOHnD7AurPYh9T0iH_XdM4Vy2dy-5Q_E6tXofUaNp947vIaCyGPQsf-tEEr6wzpHH_nj7gT1B5IPeigZrP6ZAVA-hzhdPUyrAvjX9Awe8vCBY6KaI7iQ-fYgKKOMQ3kLFoQ5lsBX9AHi9s4EaMFFcwmt3qRk2EUn9vKYwVb35ptv1D1nAomNV4SLK1DMvL6CBUeSnLFaiYVxQgn6t7e99kvHwKFK1YQLzdtHVQHuDmrkVDlc0P3_kGc-W45ZjBk7pAhjs2LIX84Yrz41_RU3Ge08314wPSILKqfMo3Y8lp77DNBQ_P_NXjlQZYy409LyOxu6XencoNHEzRov3N3RFL_Ge0S-WX3Sgk2wrnCYv8VmjSLhjMk1RUn5avVDGZR5ibnM3iFvBfZpg46homyo4yiigSa77oWmITS4yfNgSJ0On2skpD-taEEWnhYwy5SOqCLKsh9blpFjnJZze6Q
+
+POST {{baseUrl}}login
+Accept: application/json
+Content-Type: application/json
+
+{
+    "phone" : "+855889002920",
+    "password" : "Theara123"   
+}
+
+###
+POST {{baseUrl}}request-otp
+Accept: application/json
+Content-Type: application/json
+
+{
+    "phone" : "+855889002920"
+}
+
+###
+POST {{baseUrl}}verify-otp
+Accept: application/json
+Content-Type: application/json
+
+{
+    "phone" : "+855889002920",
+    "verify_code": "6883"
+}
+
+
+###
+POST {{baseUrl}}user/set-password
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+
+{
+    "password" : "Theara123@",
+    "password_confirmation":"Theara123@"
+}
+
+###
+POST https://cicstaging.z1central.com/api/register
+Content-Type: application/json
+Accept: application/json
+
+{
+    "phone" : "+855889002920"
+}
+
+
+###
+POST {{baseUrl}}user/set-password
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+
+{
+        "phone": "+855889002920",
+        "password": "Theara123",
+        "password_confirmation": "Theara123"
+}

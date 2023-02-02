@@ -1,0 +1,7 @@
+
+class SumFuntion {
+ 
+ void RecieveSum(){
+  
+ }
+}
