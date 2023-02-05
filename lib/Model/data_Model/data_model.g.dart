@@ -7,11 +7,10 @@ part of 'data_model.dart';
 // **************************************************************************
 
 _$_ModelData _$$_ModelDataFromJson(Map<String, dynamic> json) => _$_ModelData(
-      id: json['id'] as int?,
+      id: json['id'] as num?,
       title: json['title'] as String?,
       description: json['description'] as String?,
-      amount: json['amount'] as String?,
-      Icon: json['Icon'] as String?,
+      amount: json['amount'] as num?,
     );
 
 Map<String, dynamic> _$$_ModelDataToJson(_$_ModelData instance) =>
@@ -20,5 +19,4 @@ Map<String, dynamic> _$$_ModelDataToJson(_$_ModelData instance) =>
       'title': instance.title,
       'description': instance.description,
       'amount': instance.amount,
-      'Icon': instance.Icon,
     };

@@ -21,15 +21,13 @@ ModelData _$ModelDataFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ModelData {
   @JsonKey(name: "id")
-  int? get id => throw _privateConstructorUsedError;
+  num? get id => throw _privateConstructorUsedError;
   @JsonKey(name: "title")
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: "description")
   String? get description => throw _privateConstructorUsedError;
   @JsonKey(name: "amount")
-  String? get amount => throw _privateConstructorUsedError;
-  @JsonKey(name: "Icon")
-  String? get Icon => throw _privateConstructorUsedError;
+  num? get amount => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -43,11 +41,10 @@ abstract class $ModelDataCopyWith<$Res> {
       _$ModelDataCopyWithImpl<$Res, ModelData>;
   @useResult
   $Res call(
-      {@JsonKey(name: "id") int? id,
+      {@JsonKey(name: "id") num? id,
       @JsonKey(name: "title") String? title,
       @JsonKey(name: "description") String? description,
-      @JsonKey(name: "amount") String? amount,
-      @JsonKey(name: "Icon") String? Icon});
+      @JsonKey(name: "amount") num? amount});
 }
 
 /// @nodoc
@@ -67,13 +64,12 @@ class _$ModelDataCopyWithImpl<$Res, $Val extends ModelData>
     Object? title = freezed,
     Object? description = freezed,
     Object? amount = freezed,
-    Object? Icon = freezed,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -85,11 +81,7 @@ class _$ModelDataCopyWithImpl<$Res, $Val extends ModelData>
       amount: freezed == amount
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
-              as String?,
-      Icon: freezed == Icon
-          ? _value.Icon
-          : Icon // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as num?,
     ) as $Val);
   }
 }
@@ -102,11 +94,10 @@ abstract class _$$_ModelDataCopyWith<$Res> implements $ModelDataCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: "id") int? id,
+      {@JsonKey(name: "id") num? id,
       @JsonKey(name: "title") String? title,
       @JsonKey(name: "description") String? description,
-      @JsonKey(name: "amount") String? amount,
-      @JsonKey(name: "Icon") String? Icon});
+      @JsonKey(name: "amount") num? amount});
 }
 
 /// @nodoc
@@ -124,13 +115,12 @@ class __$$_ModelDataCopyWithImpl<$Res>
     Object? title = freezed,
     Object? description = freezed,
     Object? amount = freezed,
-    Object? Icon = freezed,
   }) {
     return _then(_$_ModelData(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -142,11 +132,7 @@ class __$$_ModelDataCopyWithImpl<$Res>
       amount: freezed == amount
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
-              as String?,
-      Icon: freezed == Icon
-          ? _value.Icon
-          : Icon // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as num?,
     ));
   }
 }
@@ -158,15 +144,14 @@ class _$_ModelData implements _ModelData {
       {@JsonKey(name: "id") this.id,
       @JsonKey(name: "title") this.title,
       @JsonKey(name: "description") this.description,
-      @JsonKey(name: "amount") this.amount,
-      @JsonKey(name: "Icon") this.Icon});
+      @JsonKey(name: "amount") this.amount});
 
   factory _$_ModelData.fromJson(Map<String, dynamic> json) =>
       _$$_ModelDataFromJson(json);
 
   @override
   @JsonKey(name: "id")
-  final int? id;
+  final num? id;
   @override
   @JsonKey(name: "title")
   final String? title;
@@ -175,14 +160,11 @@ class _$_ModelData implements _ModelData {
   final String? description;
   @override
   @JsonKey(name: "amount")
-  final String? amount;
-  @override
-  @JsonKey(name: "Icon")
-  final String? Icon;
+  final num? amount;
 
   @override
   String toString() {
-    return 'ModelData(id: $id, title: $title, description: $description, amount: $amount, Icon: $Icon)';
+    return 'ModelData(id: $id, title: $title, description: $description, amount: $amount)';
   }
 
   @override
@@ -194,14 +176,12 @@ class _$_ModelData implements _ModelData {
             (identical(other.title, title) || other.title == title) &&
             (identical(other.description, description) ||
                 other.description == description) &&
-            (identical(other.amount, amount) || other.amount == amount) &&
-            (identical(other.Icon, Icon) || other.Icon == Icon));
+            (identical(other.amount, amount) || other.amount == amount));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, title, description, amount, Icon);
+  int get hashCode => Object.hash(runtimeType, id, title, description, amount);
 
   @JsonKey(ignore: true)
   @override
@@ -219,18 +199,17 @@ class _$_ModelData implements _ModelData {
 
 abstract class _ModelData implements ModelData {
   factory _ModelData(
-      {@JsonKey(name: "id") final int? id,
+      {@JsonKey(name: "id") final num? id,
       @JsonKey(name: "title") final String? title,
       @JsonKey(name: "description") final String? description,
-      @JsonKey(name: "amount") final String? amount,
-      @JsonKey(name: "Icon") final String? Icon}) = _$_ModelData;
+      @JsonKey(name: "amount") final num? amount}) = _$_ModelData;
 
   factory _ModelData.fromJson(Map<String, dynamic> json) =
       _$_ModelData.fromJson;
 
   @override
   @JsonKey(name: "id")
-  int? get id;
+  num? get id;
   @override
   @JsonKey(name: "title")
   String? get title;
@@ -239,10 +218,7 @@ abstract class _ModelData implements ModelData {
   String? get description;
   @override
   @JsonKey(name: "amount")
-  String? get amount;
-  @override
-  @JsonKey(name: "Icon")
-  String? get Icon;
+  num? get amount;
   @override
   @JsonKey(ignore: true)
   _$$_ModelDataCopyWith<_$_ModelData> get copyWith =>
